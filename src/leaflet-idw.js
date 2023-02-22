@@ -292,6 +292,7 @@ L.IdwLayer = (L.Layer ? L.Layer : L.Class).extend({
                 var x=i*r,y=j*r;
                 var numerator=0,denominator=0;
                 
+                let len3
                 for (k = 0, len3 = this._latlngs.length; k < len3; k++) {          
                 
                     var p = this._map.latLngToContainerPoint(this._latlngs[k]);                    
@@ -315,7 +316,7 @@ L.IdwLayer = (L.Layer ? L.Layer : L.Class).extend({
                             
                 }
                 
-                interpolVal = numerator/denominator;
+                const interpolVal = numerator/denominator;
                 
                 cell = [j*r, i*r, interpolVal];
                 
