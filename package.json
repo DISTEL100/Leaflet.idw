@@ -1,0 +1,6 @@
+{
+  "name": "leaflet.idw",
+  "version": "0.0.1",
+  "description": "A small Leaflet plugin to generate an IDW interpolated map",
+  "main": "src/leaflet-idw.js"
+}
