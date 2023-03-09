@@ -281,10 +281,6 @@ L.IdwLayer = (L.Layer ? L.Layer : L.Class).extend({
             offsetY = 0,
             i, len, p, cell, x, y, j, len2, k;
             
-            console.log(nCellX);
-            console.log(nCellY);
-            
-            console.time('process');
         
         for (i = 0, len = nCellY; i < len; i++) {
             for (j = 0, len2 = nCellX; j < len2; j++) {     
@@ -329,11 +325,7 @@ L.IdwLayer = (L.Layer ? L.Layer : L.Class).extend({
                 }
             }
         }
-        console.timeEnd('process');
-        console.time('draw ' + data.length);
         this._idw.data(data).draw(this.options.opacity);
-        console.timeEnd('draw ' + data.length);
-
         this._frame = null;
     },
 
